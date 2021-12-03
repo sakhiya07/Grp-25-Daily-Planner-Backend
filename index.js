@@ -26,7 +26,7 @@ app.use(express.json());
 
 db();
 
-app.use("/",(req,res) => {
+app.get("/",(req,res) => {
     res.send("Hello From Express");
 })
 
@@ -34,5 +34,5 @@ app.use("/user",userRouter);
 app.use("/daily",dailyRouter);
 app.use("/monthly",monthlyRouter);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`server is running on port ${port}`));

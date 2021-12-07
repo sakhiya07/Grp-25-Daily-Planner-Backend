@@ -26,6 +26,9 @@ const monthlySchema = new Schema({
     important:[{
         type:String
     }],
+    monthlyMotto: {
+        type: String
+    }
 });
 
 const monthly = mongoose.model('monthly',monthlySchema);

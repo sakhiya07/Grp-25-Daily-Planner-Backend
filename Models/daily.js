@@ -38,7 +38,12 @@ const dailySchema = new Schema({
     selfcareRate:{
         type:Number
     },  
-
+    dailyAffirmation: {
+        type: String
+    },
+    madeBetterToday: {
+        type: String
+    },
 });
 
 const daily = mongoose.model('daily',dailySchema);

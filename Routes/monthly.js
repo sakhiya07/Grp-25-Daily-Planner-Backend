@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer');
 // post request to create a new monthly
 router.post('/add', 
 async (req, res) => {
-    const { email, date, todo, birthday, goal, shopping, important} = req.body;
+    const { email, date, todo, birthday, goal, shopping, important, monthlyMotto} = req.body;
     try {
         // find the user by email
         const monthlyData = await Monthly.findOne({email: email, date: date});
@@ -26,7 +26,8 @@ async (req, res) => {
             birthday: birthday,
             goal: goal,
             shopping: shopping,
-            important: important
+            important: important,
+            monthlyMotto: monthlyMotto
         });
         monthly = await monthly.save();
         res.json(monthly);

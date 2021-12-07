@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer');
 // post request to create a new daily
 router.post('/add', 
 async (req, res) => {
-    const {email, date, work, family, selfcare, notes, workRate, familyRate, selfcareRate } = req.body;
+    const {email, date, work, family, selfcare, thoughts, highlights, greatful, notes, workRate, familyRate, selfcareRate } = req.body;
     try {
         // find the user by email
         const dailyData = await Daily.findOne({email: email, date: date});
@@ -28,7 +28,10 @@ async (req, res) => {
             notes: notes,
             workRate: workRate,
             familyRate: familyRate,
-            selfcareRate: selfcareRate
+            selfcareRate: selfcareRate,
+            thoughts: thoughts,
+            highlights: highlights,
+            greatful: greatful
         });
         daily = await daily.save();
         res.json(daily);

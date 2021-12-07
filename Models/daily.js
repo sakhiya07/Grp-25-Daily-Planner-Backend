@@ -17,6 +17,15 @@ const dailySchema = new Schema({
     selfcare:[{
         type:String
     }],
+    thoughts:[{
+        type:String
+    }],
+    highlights:[{
+        type:String
+    }],
+    greatful:[{
+        type:String
+    }],
     notes:[{
         type:String
     }],

@@ -29,15 +29,10 @@ const dailySchema = new Schema({
     notes:[{
         type:String
     }],
-    workRate:{
+    rate: [{
         type:Number
-    },
-    familyRate:{
-        type:Number
-    },
-    selfcareRate:{
-        type:Number
-    },  
+    }],
+    
     dailyAffirmation: {
         type: String
     },

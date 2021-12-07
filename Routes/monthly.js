@@ -40,7 +40,7 @@ async (req, res) => {
 
 
 // get request to get all the monthly data by email
-router.get('/get',
+router.post('/get',
 async (req, res) => {
     const {email, date} = req.body;
     try {

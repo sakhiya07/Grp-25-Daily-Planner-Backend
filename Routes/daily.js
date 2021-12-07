@@ -46,7 +46,7 @@ async (req, res) => {
 
 
 // get request to get all the daily data by email
-router.get('/get',
+router.post('/get',
 async (req, res) => {
     const {email, date} = req.body;
     try {
